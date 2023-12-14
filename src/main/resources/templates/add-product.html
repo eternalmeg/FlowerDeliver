@@ -31,7 +31,7 @@
             <input type="text"
                    th:field="*{name}"
                    th:errorclass="is-invalid"
-                   class="form-control" id="name" placeholder="Ex: Cheeseburger">
+                   class="form-control" id="name" placeholder="Ex: Rose">
             <div class="invalid-feedback errors-register alert-danger" th:each="err :${#fields.errors('name')}"
                  th:text="${err}"/>
         </div>
@@ -45,7 +45,7 @@
                 <option value="">Select category</option>
                 <option th:each="g:${T(bg.softuni.flowerDeliver.domain.enums.ProductCategoryEnum).values()}"
                         th:text="${#strings.toUpperCase(g.name())}"
-                        th:value="${g}">burger
+                        th:value="${g}">rose
                 </option>
             </select>
             <small class="invalid-feedback errors-register alert-danger">Category is required.</small>
